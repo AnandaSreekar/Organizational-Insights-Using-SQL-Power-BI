@@ -1,52 +1,71 @@
-# Organizational Insights Using SQL & Power BI
-  Conducted HR data analysis using SQL and designed a Power BI dashboard to communicate workforce insights, including useful conclusions and meaningful findings derived from data.
-  
-## 📊 Overview
+# Workforce Insights Dashboard | SQL & Power BI
 
-This project focuses on analyzing an HR dataset to understand workforce composition, employee distribution, and department-level patterns. The analysis was performed using SQL in MySQL Workbench, and the results were visualized through an interactive Power BI dashboard.
+## 📌 Project Description
 
-The goal of the project is to transform raw employee data into meaningful organizational insights that can support workforce-related decision making.
+This project explores an employee dataset to examine workforce composition, demographic distribution, and organizational patterns. The analysis was carried out using SQL for data preparation and querying, followed by visualization through a Power BI dashboard.
 
-## 🗂️ Dataset
+The objective of the project is to demonstrate how structured data can be transformed into interpretable insights that highlight workforce characteristics and operational trends.
 
-The dataset contains employee-level information including demographic details, job roles, department assignments, work locations, hire dates, and compensation attributes.
+---
+
+## 🗂️ Data Source
+
+The dataset consists of employee-level records containing attributes such as gender, age, department, job roles, work locations, hire details, and related demographic information.
+
+---
 
 ## 🛠️ Tools & Technologies
 
-- **MySQL Workbench** – Data cleaning and analysis  
-- **SQL** – Querying and metric computation  
-- **Power BI** – Data visualization and dashboard creation  
+- **MySQL Workbench** – Data cleaning and transformation  
+- **SQL** – Querying and analytical logic  
+- **Power BI** – Visual analytics and reporting  
 
+---
 
-## ❓ Key Analysis Questions
+## 🔎 Analytical Focus
 
-1. What is the gender breakdown of employees in the company?  
-2. What is the race/ethnicity breakdown of employees?  
-3. What is the age distribution of employees?  
-4. How are employees distributed between headquarters and remote locations?  
-5. What is the distribution of job titles across the organization?  
-6. Which departments exhibit higher employee turnover?  
+The analysis emphasizes key workforce-related aspects, including:
+
+- Employee demographic distribution  
+- Age group composition  
+- Work location segmentation (Headquarters vs Remote)  
+- Job role diversity  
+- Department-level comparisons  
+- Tenure variations  
+
+---
+
+## 📊 Key Questions Addressed
+
+1. How is the workforce distributed across gender categories?  
+2. What demographic groups are represented within the organization?  
+3. How are employees distributed across different age groups?  
+4. What proportion of employees work remotely versus at headquarters?  
+5. How are job roles distributed within the company?  
+6. Which departments exhibit relatively higher employee movement?  
 7. How does employee tenure vary across departments?  
 
+---
 
-## ✅ Summary of Findings
+## ✅ Observations
 
-- The workforce shows variation in gender representation across the organization.  
-- Certain demographic categories are more prevalent than others.  
-- Employee age distribution indicates concentration within specific age ranges.  
-- A larger proportion of employees are based at headquarters compared to remote locations.  
-- Job titles are unevenly distributed, reflecting role specialization.  
-- Some departments experience relatively higher turnover compared to others.  
-- Average tenure differs across departments, suggesting variations in workforce stability.  
+- Workforce composition reflects variation across demographic categories.  
+- Age distribution indicates concentration within specific experience ranges.  
+- Headquarters-based employees represent a larger segment of the dataset.  
+- Job roles display uneven distribution, suggesting role specialization.  
+- Department-level comparisons reveal differences in employee stability.  
 
+---
 
-## ⚙️ Data Preparation Notes
+## ⚙️ Data Processing Highlights
 
-- Inconsistent date formats were standardized for accurate analysis.  
-- Invalid or unrealistic records were excluded where necessary.  
-- Data types were corrected to ensure reliable SQL operations.  
+- Standardized inconsistent date formats for reliable calculations  
+- Corrected data types to support SQL operations  
+- Handled invalid and incomplete records  
+- Derived analytical fields required for reporting  
 
+---
 
 ## 🎯 Outcome
 
-The project demonstrates how SQL and Power BI can be combined to extract insights from structured datasets and present them in a clear, visual format.
+The project illustrates a practical workflow combining SQL-based data preparation with Power BI visualization to extract and present workforce insights in an interpretable format.
