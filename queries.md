@@ -1,28 +1,39 @@
-# Organizational Insights Using SQL & Power BI
+PROJECT: Organizational Insights Using SQL & Power BI
 
-## 📊 Overview
+ANALYSIS QUESTIONS & SQL QUERIES
 
-This project explores an HR dataset to understand workforce composition, employee demographics, job role distribution, and department-level retention patterns.  
-and the analysis was conducted using SQL in MySQL Workbench, and the results were visualized through an interactive Power BI dashboard to present key organizational insights.
+1) What is the gender breakdown of employees in the company?
 
-## ❓ Analysis Questions & SQL Queries
-
- 1. What is the gender breakdown of employees in the company?
-
+Query:
 SELECT gender, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY gender;
 
-2. What is the race/ethnicity breakdown of employees?
-   
+Purpose:
+Counts active employees grouped by gender to understand gender distribution.
+
+
+------------------------------------------------------------
+
+2) What is the race/ethnicity breakdown of employees?
+
+Query:
 SELECT race, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY race
 ORDER BY employee_count DESC;
 
-4. What is the age distribution of employees?
+Purpose:
+Counts active employees by race and sorts them from highest to lowest to analyze diversity distribution.
+
+
+------------------------------------------------------------
+
+3) What is the age distribution of employees?
+
+Query:
 SELECT
     CASE
         WHEN age BETWEEN 18 AND 24 THEN '18–24'
@@ -38,20 +49,44 @@ WHERE termdate IS NULL
 GROUP BY age_group
 ORDER BY age_group;
 
-5. How are employees distributed between headquarters and remote locations?
+Purpose:
+Groups employees into defined age categories and counts active employees in each group.
+
+
+------------------------------------------------------------
+
+4) How are employees distributed between headquarters and remote locations?
+
+Query:
 SELECT location, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY location;
 
-6. What is the distribution of job titles across the organization?
+Purpose:
+Counts active employees based on work location (Headquarters vs Remote).
+
+
+------------------------------------------------------------
+
+5) What is the distribution of job titles across the organization?
+
+Query:
 SELECT jobtitle, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY jobtitle
 ORDER BY employee_count DESC;
 
-7. Which departments exhibit higher employee turnover?
+Purpose:
+Counts active employees grouped by job role and sorts them by highest frequency.
+
+
+------------------------------------------------------------
+
+6) Which departments exhibit higher employee turnover?
+
+Query:
 SELECT
     department,
     COUNT(*) AS total_employees,
@@ -62,7 +97,15 @@ WHERE age >= 18
 GROUP BY department
 ORDER BY turnover_rate DESC;
 
-8. How does employee tenure vary across departments?
+Purpose:
+Calculates total employees, number of terminated employees, and turnover percentage for each department.
+
+
+------------------------------------------------------------
+
+7) How does employee tenure vary across departments?
+
+Query:
 SELECT
     department,
     ROUND(AVG(DATEDIFF(termdate, hire_date) / 365), 1) AS avg_tenure_years
@@ -72,7 +115,11 @@ AND age >= 18
 GROUP BY department
 ORDER BY avg_tenure_years DESC;
 
-🎯 Outcome
+Purpose:
+Calculates the average number of years employees stayed in each department before leaving.
 
-This project demonstrates the use of SQL for workforce analysis and Power BI for communicating organizational insights through visual dashboards.
 
+------------------------------------------------------------
+
+FINAL OUTCOME:
+Used SQL to analyze employee data and extract workforce insights such as demographic distribution, job role counts, turnover rates, and tenure analysis. The processed results were visualized using Power BI to create an interactive organizational dashboard.
