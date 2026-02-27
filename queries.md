@@ -7,22 +7,22 @@ and the analysis was conducted using SQL in MySQL Workbench, and the results wer
 
 ## ❓ Analysis Questions & SQL Queries
 
-### 1. What is the gender breakdown of employees in the company?
+ 1. What is the gender breakdown of employees in the company?
 
-```sql
 SELECT gender, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY gender;
 
 2. What is the race/ethnicity breakdown of employees?
+   
 SELECT race, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY race
 ORDER BY employee_count DESC;
 
-3. What is the age distribution of employees?
+4. What is the age distribution of employees?
 SELECT
     CASE
         WHEN age BETWEEN 18 AND 24 THEN '18–24'
@@ -38,20 +38,20 @@ WHERE termdate IS NULL
 GROUP BY age_group
 ORDER BY age_group;
 
-4. How are employees distributed between headquarters and remote locations?
+5. How are employees distributed between headquarters and remote locations?
 SELECT location, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY location;
 
-5. What is the distribution of job titles across the organization?
+6. What is the distribution of job titles across the organization?
 SELECT jobtitle, COUNT(*) AS employee_count
 FROM hr
 WHERE age >= 18 AND termdate IS NULL
 GROUP BY jobtitle
 ORDER BY employee_count DESC;
 
-6. Which departments exhibit higher employee turnover?
+7. Which departments exhibit higher employee turnover?
 SELECT
     department,
     COUNT(*) AS total_employees,
@@ -62,7 +62,7 @@ WHERE age >= 18
 GROUP BY department
 ORDER BY turnover_rate DESC;
 
-7. How does employee tenure vary across departments?
+8. How does employee tenure vary across departments?
 SELECT
     department,
     ROUND(AVG(DATEDIFF(termdate, hire_date) / 365), 1) AS avg_tenure_years
